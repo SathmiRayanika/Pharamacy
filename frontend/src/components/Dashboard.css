@@ -1,0 +1,199 @@
+.dashboard-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2C3E50;
+  color: #ecf0f1;
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.sidebar-header h2 {
+  color: #fbfbfb;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0;
+}
+
+.sidebar-menu a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 4px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background and color transition */
+}
+
+.sidebar-menu a:hover {
+  background-color: #fdfeff; /* Darker background on hover */
+  color: #ffffff; /* Change text color on hover */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 500px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-sections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-button {
+  padding: 8px 12px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
+/* Expiring Alert Styles */
+.expiring-alert {
+  background-color: #ffffff; /* White background for a clean, modern look */
+  padding: 15px;
+  border: 2px solid #2196f3; /* Bright blue border for a pharmacy theme */
+  border-radius: 15px; /* Softer, more rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: slideIn 0.6s forwards ease-in-out;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+.expiring-alert h3 {
+  color: #1976d2; /* Darker blue for headings */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* List Item Styles */
+.expiring-alert ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expiring-alert ul li {
+  background-color: #e3f2fd; /* Soft light blue background */
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #1565c0; /* Text in deeper blue */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow on items */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.expiring-alert ul li:hover {
+  transform: scale(1.05); /* Slight scaling for interaction */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.expiring-alert ul li span {
+  font-weight: bold;
+  color: #f44336; /* Red color for expiry date to highlight urgency */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
